@@ -14,10 +14,10 @@ jobs:
     strategy:
       matrix:
         node: [14, 16, 18]
-    name: E2E on Node v${{ matrix.node }}
+    name: Cypress v9 E2E on Node v${{ matrix.node }}
     steps:
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
       - run: node -v
@@ -40,10 +40,10 @@ jobs:
     strategy:
       matrix:
         node: [14, 16, 18]
-    name: E2E on Node v${{ matrix.node }}
+    name: v10 E2E on Node v${{ matrix.node }}
     steps:
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
       - run: node -v
